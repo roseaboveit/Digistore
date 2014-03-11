@@ -5,9 +5,15 @@
       {{# each }}
       <li>
         {{# link-to "product" this }}
+          <div>
+            <img {{ bind-attr src=image }} class='thumbnail col-lg-12' />
+          <br>
           {{ name }}
+          </div>
         {{/link-to}}
       </li>
+      <br>
+      <br>
       {{/ each }}
     </ul>
   </div>
