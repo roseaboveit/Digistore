@@ -1,8 +1,25 @@
 <h1>Cart Contents</h1>
-{{# each items }}
-  <br>
-  {{ this.product.name }}
-  <br>
-  {{ this.product.dollars }}
-  <br>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Subtotal</th>
+  </tr>
+
+{{# each items }}  
+  <tr>
+    <td>{{ this.product.name }}</td>
+    <td>{{ this.product.dollars }}</td>
+    <td>{{ this.quantity }}</td>
+    <td></td>
+  </tr>
 {{/ each }}
+</table>
+
+
+  <br>
+  
+  <br>
+  
+  <br>
