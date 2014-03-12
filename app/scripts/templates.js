@@ -15,7 +15,7 @@ function program1(depth0,data) {
   data.buffer.push("</p>\n    <hr>\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  \n  <div class='text-muted'><small>Foot</small></div>\n</div>\n");
+  data.buffer.push("\n  \n  <div class='text-muted'><small>Foot</small></div>\n</div>\n\n");
   return buffer;
   
 });
