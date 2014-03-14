@@ -19,7 +19,6 @@ App.ProductRoute = Ember.Route.extend({
         item.save();
       })
       this.transitionTo("cart");
-      console.log("I could add "+ this.name +" to the cart if I really wanted to!")
     }
   }
 })

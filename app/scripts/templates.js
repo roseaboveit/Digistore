@@ -28,26 +28,26 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1;
-  data.buffer.push("  \n  <tr>\n    <td>");
+  data.buffer.push("  \n    <tr>\n      <td>");
   stack1 = helpers._triageMustache.call(depth0, "product.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n    <td>");
+  data.buffer.push("</td>\n      <td>");
   stack1 = helpers._triageMustache.call(depth0, "product.dollars", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n    <td>");
+  data.buffer.push("</td>\n      <td>");
   stack1 = helpers._triageMustache.call(depth0, "quantity", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n    <td>");
+  data.buffer.push("</td>\n      <td>");
   stack1 = helpers._triageMustache.call(depth0, "subtotal", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n  </tr>\n");
+  data.buffer.push("</td>\n    </tr>\n  ");
   return buffer;
   }
 
-  data.buffer.push("<h1>Cart Contents</h1>\n<table>\n  <tr>\n    <th>Product</th>\n    <th>Price</th>\n    <th>Quantity</th>\n    <th>Subtotal</th>\n  </tr>\n\n");
+  data.buffer.push("<h1>Cart Contents</h1>\n\n<div>\n  <table class=\"table\">\n    <tr>\n      <th>Product</th>\n      <th>Price</th>\n      <th>Quantity</th>\n      <th>Subtotal</th>\n    </tr>\n\n  ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n</table>\n\n\n  <br>\n  \n  <br>\n  \n  <br>\n");
+  data.buffer.push("\n  </table>\n</div>\n\n");
   return buffer;
   
 });
