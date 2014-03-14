@@ -38,7 +38,7 @@ function program1(depth0,data) {
   stack1 = helpers._triageMustache.call(depth0, "quantity", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</td>\n      <td>");
-  stack1 = helpers._triageMustache.call(depth0, "subtotal", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers._triageMustache.call(depth0, "dollars", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</td>\n    </tr>\n  ");
   return buffer;
