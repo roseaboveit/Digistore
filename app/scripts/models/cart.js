@@ -15,9 +15,4 @@ App.Cart = DS.Model.extend({
      }.property('items.@each.subtotal') 
 })
 
-App.Cart.FIXTURES = [
-  {
-    id: 1,
-    items: []
-  }
-]
+App.Cart.FIXTURES = [{id: "fixture-0", items:[]}]
