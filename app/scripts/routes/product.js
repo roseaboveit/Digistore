@@ -6,7 +6,7 @@ App.ProductRoute = Ember.Route.extend({
   actions: {
     addToCart: function(product){
       var store = this.store;
-      this.store.find("cart", 1).then( function (cart){
+      this.store.find("cart", localStorage.cartId).then( function (cart){
         var item = store.createRecord("item",{
           cart: cart,
           product: product,
@@ -19,7 +19,6 @@ App.ProductRoute = Ember.Route.extend({
         item.save();
       })
       this.transitionTo("cart");
-      console.log("I could add "+ this.name +" to the cart if I really wanted to!")
     }
   }
 })
