@@ -6,7 +6,6 @@ App.ProductRoute = Ember.Route.extend({
   actions: {
     addToCart: function(product){
       var store = this.store;
-      // var cart = store.find("cart", localStorage.cartId)
       this.store.find("cart", localStorage.cartId).then( function (cart){
         var item = store.createRecord("item",{
           cart: cart,
@@ -15,7 +14,6 @@ App.ProductRoute = Ember.Route.extend({
           price: product.get("price")
         })
         cart.get("items").then( function(items){
-          debugger;
           items.pushObject(item)
         })
         item.save();
