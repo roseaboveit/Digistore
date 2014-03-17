@@ -8,7 +8,7 @@ App.Item = DS.Model.extend({
   }.property("quantity", "price"),
   dollars: function(subtotal){
           return "$" + this.get("subtotal")/100;
-     }.property("price")
+     }.property("price", "quantity")
 })
 
 App.Item.FIXTURES = [

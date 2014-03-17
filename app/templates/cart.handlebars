@@ -9,14 +9,26 @@
       <th>Subtotal</th>
     </tr>
 
-  {{# each items }}  
+    {{# each items }}  
     <tr>
       <td>{{ product.name }}</td>
       <td>{{ product.dollars }}</td>
-      <td>{{ quantity }}</td>
+      <td>
+        {{ quantity }}
+        <button {{ action "more" this }}>+</button>
+        <button {{ action "less" this }}>-</button>
+      </td>
       <td>{{ dollars }}</td>
     </tr>
-  {{/ each }}
+    {{/ each }}
+
+    <tr>
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td>{{ dollars }}</td>
+    </tr>
+
   </table>
 </div>
 
