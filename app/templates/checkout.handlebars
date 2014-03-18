@@ -1,0 +1,28 @@
+<h3>Checkout</h3>
+<h3>Personal Information</h3>
+<div class='form-group'>
+  <label for="name">Name</label>
+  {{input type='text' value=name class='form-control'}}
+</div>
+<div class='form-group'>
+  <label for="email">Email</label>
+  {{input type='text' value=email class='form-control'}}
+</div>
+<div class='form-group'>
+  <label for="creditcard">Credit Card Number</label>
+  {{input type='number' value=creditcard class='form-control'}}
+</div>
+<div class='form-group'>
+  <label for="cvv">CVV</label>
+  {{input type='number' value=cvv class='form-control'}}
+</div>
+<div class='form-group'>
+  <label for="zipcode">Zipcode</label>
+  {{input type='number' value=zipcode class='form-control'}}
+</div>
+<div class='form-group'>
+  <label for="expiration">Expiration</label>
+  {{input type='date' value=expiration class='form-control'}}
+</div>
+
+<a href=“#” {{action "goToPurchase" this}} class='btn'>Purchase</a>

@@ -14,5 +14,3 @@ App.Cart = DS.Model.extend({
           return "$" + this.get("total")/100;
      }.property('items.@each.subtotal') 
 })
-
-App.Cart.FIXTURES = [{id: "fixture-0", items:[]}]
