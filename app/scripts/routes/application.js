@@ -1,6 +1,10 @@
 App.ApplicationRoute = Ember.Route.extend({
 
   beforeModel: function () {
+    
+  },
+
+  model: function(){
     if (typeof(localStorage.cartId) === "undefined"){
       var cart = this.store.createRecord("cart")
       cart.save().then(
@@ -15,9 +19,7 @@ App.ApplicationRoute = Ember.Route.extend({
         );
       
     }
-  },
 
-  model: function(){
     return this.store.find("cart", localStorage.cartId)
   }
 })
